@@ -7,7 +7,7 @@ function Works(props) {
         {
           id: "1",
           icon: "./images/mobile.png",
-          title: "Aztec \n E-commerce Website",
+          title: "Aztec E-commerce Website",
           desc:
             `E-commerce project with cool sliders and functionality. Unfinished, but ready to be tested.`,
           advice: "*Try adding products to cart from the homepage, then check your total price in the right corner :)",
@@ -43,7 +43,7 @@ function Works(props) {
           title: "Bankist App",
           desc:
             "The earliest one in the slider, finished in 2021 while taking the Jonas Schmedtmann course on Udemy.",
-          advice: "*Try logging in by using the following credentials: login: js, password: 1111. Then transfer money/request a loan and hit enter.",
+          advice: "*Try logging in by using the following credentials: login: js, password: 1111. Then transfer money to jd/request a loan and hit enter.",
           img:
           "./images/min-bankist-account.jpg",
           link: 'https://bankist-account-js.netlify.app'

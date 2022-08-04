@@ -55,9 +55,10 @@ function Portfolio(props) {
                     />
                 ))}
             </ul>
+            <h5><i>It is strongly advised to test the apps using the instructions in the section below, as some functionality may not be finished yet.</i></h5>
             <div className="container">
                 {data.map(element=>(
-                    <div className={element.classNames}>
+                    <div className={element.classNames} onClick={()=> window.open(element.link, "_blank")}>
                         <img src={element.img} alt={element.title} />
                         <h3>{element.title}</h3>
                     </div>
