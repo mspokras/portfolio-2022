@@ -1,7 +1,7 @@
 @import '../../global.scss';
 
 .works {
-    background-color: crimson;
+    background: linear-gradient(salmon, coral);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@
             justify-content: center;
 
             .item {
-                width: 700px;
+                width: 800px;
                 height: 100%;
                 background-color: white;
                 border-radius: 20px;
@@ -70,11 +70,12 @@
                 }
 
                 .left {
-                    flex: 4;
-                    height: 80%;
+                    flex: 3;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding-left: 10px;
 
                     .leftContainer {
                         width: 90%;
@@ -115,8 +116,15 @@
 
                         span {
                             font-size: 12px;
+                            font-weight: 500;
+                            font-style: italic;
+
+                        }
+
+                        a {
+                            font-size: 16px;
                             font-weight: 600;
-                            text-decoration: underline;
+                            color:coral;
                             cursor: pointer;
 
                             @include mobile {
@@ -137,6 +145,8 @@
                     img {
                         width: 400px;
                         transform: rotate(-10deg);
+                        object-fit: contain;
+                        flex: 1;
                     }
                 }
             }

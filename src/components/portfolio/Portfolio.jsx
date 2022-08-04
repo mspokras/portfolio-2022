@@ -1,52 +1,45 @@
 import { React, useEffect, useState } from 'react';
 import PortfolioList from '../portfolioList/PortfolioList';
 import './Portfolio.scss'
-import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from '../../data'
+import { reactProjPortfolio, simpleReactProjPortfolio, vanillaJSPortfolio, htmlCssPortfolio } from '../../data'
 
 function Portfolio(props) {
-    const [selected, setSelected] = useState("featured");
+    const [selected, setSelected] = useState("reactProj");
     const [data, setData] = useState([]);
     const list = [
         {
-          id: "featured",
-          title: "Featured",
+          id: "reactProj",
+          title: "React Projects",
         },
         {
-          id: "web",
-          title: "Web App",
+          id: "simpleReactProj",
+          title: "Simple React Projects",
         },
         {
-          id: "mobile",
-          title: "Mobile App",
+          id: "vanillaJS",
+          title: "Vanilla JS Projects",
         },
         {
-          id: "design",
-          title: "Design",
-        },
-        {
-          id: "content",
-          title: "Content",
+          id: "htmlCss",
+          title: "HTML & CSS Websites",
         },
     ];
     useEffect(()=>{
         switch(selected) {
-            case "featured":
-                setData(featuredPortfolio);
+            case "reactProj":
+                setData(reactProjPortfolio);
                 break;
-            case "web":
-                setData(webPortfolio);
+            case "simpleReactProj":
+                setData(simpleReactProjPortfolio);
                 break;
-            case "mobile":
-                setData(mobilePortfolio);
+            case "vanillaJS":
+                setData(vanillaJSPortfolio);
                 break;
-            case "design":
-                setData(designPortfolio);
-                break;
-            case "content":
-                setData(contentPortfolio);
+            case "htmlCss":
+                setData(htmlCssPortfolio);
                 break;
             default: 
-                setData(featuredPortfolio);    
+                setData(reactProjPortfolio);    
         }
     }, [selected])
     return (
@@ -55,16 +48,16 @@ function Portfolio(props) {
             <ul>
                 {list.map((item)=>(
                     <PortfolioList
-                    title={item.title}
-                    active={selected === item.id}
-                    setSelected={setSelected}
-                    id={item.id}
-                />
+                        title={item.title}
+                        active={selected === item.id}
+                        setSelected={setSelected}
+                        id={item.id}
+                    />
                 ))}
             </ul>
             <div className="container">
                 {data.map(element=>(
-                    <div className="item">
+                    <div className={element.classNames}>
                         <img src={element.img} alt={element.title} />
                         <h3>{element.title}</h3>
                     </div>

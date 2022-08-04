@@ -7,35 +7,63 @@ function Works(props) {
         {
           id: "1",
           icon: "./images/mobile.png",
-          title: "Web Design",
+          title: "Aztec \n E-commerce Website",
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            `E-commerce project with cool sliders and functionality. Unfinished, but ready to be tested.`,
+          advice: "*Try adding products to cart from the homepage, then check your total price in the right corner :)",
           img:
-            "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+            "./images/min-aztec-cart.jpg",
+          link: 'https://e-commerce-aztec.netlify.app/'
         },
         {
           id: "2",
           icon: "./images/globe.png",
-          title: "Mobile Application",
+          title: "Easy Travel",
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "My first project from scratch in Vanilla JS.",
+          advice: "*Try picking two countries: one of your origin and another where you want to travel. Enjoy!",
           img:
-            "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+            "./images/min-easy-travel-2.jpg",
+          link: 'https://easy-travel-js.netlify.app/'
         },
         {
           id: "3",
           icon: "./images/writing.png",
-          title: "Branding",
+          title: "TRVL Agency",
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "The website in React.js, which is pretty attractive visually, although the functionality is basic.",
+          advice: "*Try scrolling down the homepage and clicking on different tabs.",
           img:
-            "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+          "./images/min-trvl.jpg",
+          link: 'https://trvl-draft.netlify.app/products'
+        },
+        {
+          id: "4",
+          icon: "./images/bank-icon.png",
+          title: "Bankist App",
+          desc:
+            "The earliest one in the slider, finished in 2021 while taking the Jonas Schmedtmann course on Udemy.",
+          advice: "*Try logging in by using the following credentials: login: js, password: 1111. Then transfer money/request a loan and hit enter.",
+          img:
+          "./images/min-bankist-account.jpg",
+          link: 'https://bankist-account-js.netlify.app'
+        },        
+        {
+          id: "5",
+          icon: "./images/headphones-icon.png",
+          title: "Rayes E-commerce One-page Website",
+          desc:
+            "Extremely simple, created by tutorial, but yet nice enough to check out.",
+          advice: "*Try moving the mouse over any headphones.",
+          img:
+          "./images/min-rayes.jpg",
+          link: 'https://headphones-plp.netlify.app/'
         },
       ];
 
     const handleClick = (way) => {
         way === 'left' ? 
-        setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2) :
+        setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 4) :
         setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
     }
     return (
@@ -47,16 +75,17 @@ function Works(props) {
                         <div className="left">
                             <div className="leftContainer">
                                 <div className="imgContainer">
-                                    <img src={d.img} alt="mobile" />
+                                    <img src={d.icon} alt="mobile" />
                                 </div>
                                 <h2>{d.title}</h2>
                                 <p>{d.desc}</p>
-                                <span>Projects</span>
+                                <span>{d.advice}</span>
+                                <a href={d.link} target="_blank" rel="noreferrer">See the whole project</a>
                             </div>
                         </div>
                         <div className="right">
                         <img
-                            src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
+                            src={d.img}
                             alt=""
                             />
                         </div>

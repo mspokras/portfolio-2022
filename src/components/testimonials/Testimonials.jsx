@@ -5,34 +5,34 @@ function Testimonials(props) {
     const data = [
         {
           id: 1,
-          name: "Tom Durden",
+          name: "Tom Jones",
           title: "Senior Developer",
           img:
             "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           icon: "images/twitter.png",
           desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+            "Testimonials are yet to be added. If you want to give feedback, contact me via e-mail.",
         },
         {
           id: 2,
-          name: "Alex Kalinski",
-          title: "Co-Founder of DELKA",
+          name: "Alexandra Sapinski",
+          title: "Co-Founder of AZTEC",
           img:
             "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           icon: "images/youtube.png",
           desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+            "Testimonials are yet to be added. If you want to give feedback, contact me via e-mail.",
           featured: true,
         },
         {
           id: 3,
-          name: "Martin Harold",
-          title: "CEO of ALBI",
+          name: "Jim Johnson",
+          title: "Product Owner",
           img:
             "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           icon: "images/linkedin.png",
           desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+            "Testimonials are yet to be added. If you want to give feedback, contact me via e-mail.",
         },
       ];
     return (
